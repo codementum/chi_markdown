@@ -1,0 +1,119 @@
+\documentclass{sigchi}
+
+% Remove or comment out these two lines for final version
+\toappearbox{\Large Submitted to CHI'13. \\Do not cite, do not circulate.}
+\pagenumbering{arabic}% Arabic page numbers for submission. 
+
+% Use \toappear{...} to override the default ACM copyright statement (e.g. for preprints).
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{url}      % llt: nicely formatted URLs
+
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={SIGCHI Conference Proceedings Format},
+pdfauthor={LaTeX},
+pdfkeywords={SIGCHI, proceedings, archival format},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{On CHI'ing Well}
+
+% Note that submissions are blind, so author information should be omitted
+\numberofauthors{4}
+\author{
+  \alignauthor 1st Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}
+  \alignauthor 2nd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}    
+  \alignauthor 3rd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}
+  \alignauthor 4th Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}
+}
+
+% Teaser figure can go here
+%\teaser{
+%  \centering
+%  \includegraphics{Figure1}
+%  \caption{Teaser Image}
+%  \label{fig:teaser}
+%}
+
+\maketitle
+
+\begin{abstract}
+Recent research suggests that markdown is awesome.
+\end{abstract}
+
+\keywords{
+}
+
+\category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous
+}
+
+\terms{
+	Human Factors; Design; Measurement. 
+}
+
+\input{body.tex}
+
+
+\balance
+
+% If you want to use smaller typesetting for the reference list,
+% uncomment the following line:
+% \small
+\bibliographystyle{acm-sigchi}
+\bibliography{chi}
+\end{document}
